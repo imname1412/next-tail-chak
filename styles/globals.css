@@ -1,16 +1,33 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+
+  .menu-link{
+    @apply rounded-full bg-[#000] p-4 cursor-pointer 
+    transition-all ease-linear delay-150
+    hover:-translate-y-1
+  }
+
+  .card_news{
+    @apply border border-gray-400 p-5 rounded-md bg-slate-50
+  }
+
+  .card_lab{
+    @apply border p-5 rounded-md bg-slate-100
+    w-auto cursor-pointer flex flex-col items-start justify-start
+    hover:border-slate-400
+    ;
+  }
+
 }
